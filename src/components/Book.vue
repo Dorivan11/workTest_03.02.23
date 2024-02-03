@@ -33,7 +33,9 @@ export default {
         addBookToBasket(){
             this.$store.commit('addBookToBasket', this.book)
             this.$store.commit('setBookInBasket', this.book)
+            console.log('books in catalog')
             console.log(this.$store.getters.getAllBooks)
+            console.log('books in basket')
             console.log(this.$store.getters.getBooksInBasket)
             //this.$store.commit('getBookStatus', this.book)
         },
