@@ -1,64 +1,64 @@
 {
   "books": [
     {
-      "id": 1,
-      "bookInCatalog": true,
-      "bookName": "Albatros_1",
-      "bookSkin": "https://gas-kvas.com/uploads/posts/2023-01/1673467472_gas-kvas-com-p-detskie-risunki-s-bukvoi-s-27.jpg",
-      "bookStyle": "Journey",
-      "bookAutor": "Alabaev",
-      "bookYear": 2009,
-      "bookPrice": 104900
+      "id": "1",
+      "bookInCatalog": false,
+      "bookName": "Name12333123",
+      "bookSkin": "https://img.razrisyika.ru/kart/136/543999-fotografiy-v-horoshem-kachestve-25.jpg",
+      "bookStyle": "Style33",
+      "bookAutor": "Autor33",
+      "bookYear": "33333",
+      "bookPrice": "33333"
     },
     {
-      "id": 2,
-      "bookInCatalog": true,
-      "bookName": "Aristotel_2",
-      "bookSkin": "https://i.pinimg.com/736x/5f/79/d5/5f79d5d3e04c7bb5c706fa0b6e1eedcc.jpg",
-      "bookStyle": "Biography",
-      "bookAutor": "Babaev",
-      "bookYear": 2018,
-      "bookPrice": 299900
+      "id": "2",
+      "bookInCatalog": false,
+      "bookName": "Namevvv",
+      "bookSkin": "https://frazy.su/wp-content/uploads/2016/05/image.jpg",
+      "bookStyle": "Stylevvvv",
+      "bookAutor": "Autorvvvv",
+      "bookYear": "22222",
+      "bookPrice": "22222"
     },
     {
-      "id": 3,
-      "bookInCatalog": true,
-      "bookName": "Alarmist_3",
-      "bookSkin": "https://klike.net/uploads/posts/2020-06/1593408252_17.jpg",
+      "id": "3",
+      "bookInCatalog": false,
+      "bookName": "Alarmist",
+      "bookSkin": "https://attuale.ru/wp-content/uploads/2019/01/moth_antennae_1600.jpg",
       "bookStyle": "Biography",
       "bookAutor": "Alertov",
       "bookYear": 2010,
-      "bookPrice": 100900
+      "bookPrice": 1009
     },
     {
-      "id": 4,
+      "id": "4",
       "bookInCatalog": true,
-      "bookName": "Veles_1",
-      "bookSkin": "https://fsd.multiurok.ru/html/2022/02/21/s_621358798ca0c/phpjKpz15_BUKVY--ALFAVITA_html_9c2501f20f8660f6.jpg",
-      "bookStyle": "Journey",
+      "bookName": "Veles",
+      "bookSkin": "https://inteq-bau.ru/wp-content/uploads/1/a/0/1a0f3ead72ff35e7fc084c96c47a09fe.jpeg",
+      "bookStyle": "Story",
       "bookAutor": "Babaev",
       "bookYear": 2015,
-      "bookPrice": 56000
+      "bookPrice": 5600
     },
     {
-      "id": 5,
+      "id": "5",
       "bookInCatalog": true,
-      "bookName": "Vasilkov_2",
-      "bookSkin": "https://img.razrisyika.ru/kart/85/1200/336132-kartinok-s-bukvami-33.jpg",
-      "bookStyle": "Biography",
+      "bookName": "Vasilkov",
+      "bookSkin": "https://new-world-rpg.ru/wp-content/uploads/1/c/7/1c7721bc7625ff4bc267116ae4eec6a2.jpeg",
+      "bookStyle": "Encyclopedia",
       "bookAutor": "Alabaev",
       "bookYear": 2006,
-      "bookPrice": 145000
+      "bookPrice": 1450
     },
     {
-      "id": 6,
+      "id": "6",
       "bookInCatalog": true,
-      "bookName": "Volshebnik_3",
-      "bookSkin": "https://klike.net/uploads/posts/2020-06/1593409547_3.jpg",
-      "bookStyle": "Journey",
-      "bookAutor": "Alertov",
-      "bookYear": 2020,
-      "bookPrice": 334000
+      "bookName": "shar",
+      "bookSkin": "https://sportishka.com/uploads/posts/2022-11/1667535247_35-sportishka-com-p-shar-dlya-gimnastiki-oboi-47.jpg",
+      "bookStyle": "fiol",
+      "bookAutor": "sharikov",
+      "bookYear": "3333",
+      "bookPrice": "3333"
     }
   ]
 }

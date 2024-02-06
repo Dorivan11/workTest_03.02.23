@@ -13,41 +13,61 @@
                 <p> Год издания - {{ book.bookYear }} </p>
                 <p> Цена - {{ book.bookPrice }} </p>
             </v-card-text>
-            <v-btn v-if="!checkBookStatus()" @click="addBookToBasket"> Добавить в корзину </v-btn>
-            <v-btn v-else @click="deleteBookFromBasket()"> Удалить из корзины </v-btn>
+            <v-btn v-if="checkBookStatus" @click="addBookToBasket(), updateServerDataDeleteFromCatalog"> Добавить в корзину </v-btn>
+            <div v-else>
+                <v-btn @click="deleteBookFromBasket(), updateServerDataDeleteFromBasket"> Удалить из корзины </v-btn>
+                <v-btn @click="openBookForRedaction()"> Редактировать книгу </v-btn>
+            </div>
+            
         </v-card>
     </v-row>
 </template>
   
 <script>
-
-  
 export default {
+    data: ()=>({
+        urlServer: 'http://localhost:3333/books',
+    }),
     props:{
         book:{
             type: Object,
             required: true
         },
     },
+    computed:{
+        checkBookStatus(){
+            return this.book.bookInCatalog
+        },
+        async updateServerDataDeleteFromCatalog(){
+            const request = await fetch(`${this.urlServer}/${this.book.id}`, {
+            method: 'PATCH',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({"bookInCatalog": false})
+            })
+            //const result2 = await request.json()
+        },
+        async updateServerDataDeleteFromBasket(){
+            const request = await fetch(`${this.urlServer}/${this.book.id}`, {
+            method: 'PATCH',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({"bookInCatalog": true})
+            })
+            //const result2 = await request.json()
+        },
+    },
     methods:{
         addBookToBasket(){
             this.$store.commit('addBookToBasket', this.book)
             this.$store.commit('setBookInBasket', this.book)
-            console.log('books in catalog')
-            console.log(this.$store.getters.getAllBooks)
-            console.log('books in basket')
-            console.log(this.$store.getters.getBooksInBasket)
-            //this.$store.commit('getBookStatus', this.book)
-        },
-        checkBookStatus(){
-            console.log('checkBookStatus')
-            //console.log(this.$store.commit('getBookStatus', this.book))
-            return this.$store.commit('getBookStatus', this.book)
         },
         deleteBookFromBasket(){
-            console.log('deleteBookFromBasket')
-            console.log(this.$store.commit('getBookStatus', this.book))
-            //return this.$store.commit('getBookStatus', this.book)
+            this.$store.commit('deleteBookFromBasket', this.book)
+            this.$store.commit('setBookInCatalog', this.book)
+
+        },
+        openBookForRedaction(){
+            this.$store.commit('setBookForRedaction', this.book)
+            this.$store.commit('showRedactionDialog')
         }
     }
 };

@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import MainPage from "@/components/MainPage"
-import RedactorPage from "@/components/RedactorPage"
 import BasketPage from "@/components/BasketPage"
 
 Vue.use(VueRouter)
@@ -14,10 +13,6 @@ const routes=[
     {
         path: '/basket',
         component: BasketPage
-    },
-    {
-        path: '/redactor',
-        component: RedactorPage
     }
 ]
 

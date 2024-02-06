@@ -1,30 +1,30 @@
 <template>
-    <v-container>
+    <v-container >
         <h1> Корзина </h1>
         <v-col>
             <Book
-                v-for="book1 in $store.getters.getBooksInBasket"
-                :key="book1.id"
-                v-bind:book="book1"
+                v-for="bookInMass in $store.getters.getBooksInBasket"
+                :key="bookInMass.id"
+                v-bind:book="bookInMass"
             />
         </v-col>
+        <RedactorDialog />
     </v-container>
 </template>
   
 <script>
 import Book from '@/components/Book.vue'
+import RedactorDialog from './RedactorDialog.vue';
 export default {
-    data: ()=>({
-        
-    }),
     components:{
-        Book
+        Book,
+        RedactorDialog
     },
     methods:{
-        
+        showRedactorWindow(book){
+            this.bookForRedaction = book
+            this.DialogRedactorVisible = true
+        },
     },
-    mounted(){
-        
-    }
 };
 </script>

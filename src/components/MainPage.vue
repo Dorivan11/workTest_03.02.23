@@ -2,11 +2,10 @@
     <v-container>
         <v-col>
             <Book
-                v-for="book1 in $store.getters.getAllBooks"
-                :key="book1.id"
-                v-bind:book="book1"
+                v-for="bookInMass in $store.getters.getAllBooks"
+                :key="bookInMass.id"
+                v-bind:book="bookInMass"
             />
-            
         </v-col>
     </v-container>
 </template>
@@ -18,14 +17,6 @@ export default {
     components:{
         Book
     },
-    created(){
-
-    },
-    mounted(){
-
-    },
-    methods:{
-    }
 };
 </script>
   
